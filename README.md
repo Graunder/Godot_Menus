@@ -1,1 +1,1 @@
-# Godot_MagicDungeonThing
+# Godot_MagicThing
