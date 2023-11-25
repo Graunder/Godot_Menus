@@ -33,6 +33,9 @@ func game_pause(should_pause : bool):
 		menu.hide()
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
+func reset_pause():
+	level.get_tree().paused = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass

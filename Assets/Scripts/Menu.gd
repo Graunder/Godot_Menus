@@ -16,7 +16,9 @@ func _on_resume_pressed():
 	main.game_pause(false)
 	
 func _on_give_up_pressed():
-	pass # Replace with function body.
+	main.unload_level()
+	main.reset_pause()
+	switch_play_button(false)
 
 func switch_play_button(switch_buttons : bool):
 	if switch_buttons:
