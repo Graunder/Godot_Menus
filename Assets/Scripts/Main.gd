@@ -42,7 +42,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("esc"):
+	if Input.is_action_just_pressed("esc") && level_instance != null:
 		if menu.is_visible_in_tree():
 			game_pause(false)
 		else:
