@@ -30,10 +30,16 @@ visible = false
 layout_mode = 2
 text = "RESUME"
 
+[node name="Give_Up" type="Button" parent="MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "GIVE UP"
+
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "QUIT"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Give_Up" to="." method="_on_give_up_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
