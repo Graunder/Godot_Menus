@@ -11,39 +11,40 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hulx2")
 
-[node name="Main" type="MarginContainer" parent="."]
+[node name="MainMenu" type="MarginContainer" parent="."]
 layout_mode = 0
 offset_left = 25.0
 offset_right = 518.0
 offset_bottom = 1080.0
 
-[node name="MainContainer" type="VBoxContainer" parent="Main"]
+[node name="MainContainer" type="VBoxContainer" parent="MainMenu"]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="Play" type="Button" parent="Main/MainContainer"]
+[node name="Play" type="Button" parent="MainMenu/MainContainer"]
 layout_mode = 2
 text = "PLAY"
 
-[node name="Resume" type="Button" parent="Main/MainContainer"]
+[node name="Resume" type="Button" parent="MainMenu/MainContainer"]
 visible = false
 layout_mode = 2
 text = "RESUME"
 
-[node name="Give_Up" type="Button" parent="Main/MainContainer"]
+[node name="Give_Up" type="Button" parent="MainMenu/MainContainer"]
 visible = false
 layout_mode = 2
 text = "GIVE UP"
 
-[node name="Options" type="Button" parent="Main/MainContainer"]
+[node name="Options" type="Button" parent="MainMenu/MainContainer"]
 layout_mode = 2
 text = "OPTIONS"
 
-[node name="Quit" type="Button" parent="Main/MainContainer"]
+[node name="Quit" type="Button" parent="MainMenu/MainContainer"]
 layout_mode = 2
 text = "QUIT"
 
 [node name="OptionsMenu" type="MarginContainer" parent="."]
+visible = false
 custom_minimum_size = Vector2(1000, 800)
 layout_mode = 1
 anchors_preset = 8
@@ -81,8 +82,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "Apply"
 
-[connection signal="pressed" from="Main/MainContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Main/MainContainer/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="Main/MainContainer/Give_Up" to="." method="_on_give_up_pressed"]
-[connection signal="pressed" from="Main/MainContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="Main/MainContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MainMenu/MainContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MainMenu/MainContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MainMenu/MainContainer/Give_Up" to="." method="_on_give_up_pressed"]
+[connection signal="pressed" from="MainMenu/MainContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MainMenu/MainContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="OptionsMenu/VBoxContainer/HBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="OptionsMenu/VBoxContainer/HBoxContainer/Apply" to="." method="_on_apply_pressed"]
