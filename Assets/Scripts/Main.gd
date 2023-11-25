@@ -22,6 +22,7 @@ func load_level(level_name : String):
 
 func load_dev_scene():
 	load_level("DEV_Level")
+	menu.switch_play_button(true)
 
 func game_pause(should_pause : bool):
 	level.get_tree().paused = should_pause
@@ -43,3 +44,4 @@ func _process(delta):
 			game_pause(false)
 		else:
 			game_pause(true)
+
