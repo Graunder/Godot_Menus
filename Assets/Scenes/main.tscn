@@ -4,8 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://d348mhqx8xjwo" path="res://Assets/Scenes/menu.tscn" id="2_us0qy"]
 
 [node name="main" type="Node"]
+process_mode = 3
 script = ExtResource("1_3o3yr")
 
 [node name="Menu" parent="." instance=ExtResource("2_us0qy")]
 
 [node name="Level" type="Node3D" parent="."]
+process_mode = 1
