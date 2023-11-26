@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://i3t5mkdp5hxi"]
 
-[ext_resource type="PackedScene" uid="uid://cumc1rsljw0m4" path="res://Assets/Scenes/player.tscn" id="1_oxw2g"]
+[ext_resource type="PackedScene" uid="uid://b5ttpkkv5yyht" path="res://Assets/Scenes/player_wOutile.tscn" id="1_xhgdy"]
 [ext_resource type="Texture2D" uid="uid://cao3c1us2s0vp" path="res://Assets/Textures/Dev/dark.png" id="2_utpvd"]
 [ext_resource type="Material" uid="uid://c5vmkbeaopotv" path="res://Assets/Materials/toon_shader_material.tres" id="3_a31yl"]
 
@@ -23,7 +23,7 @@ glow_enabled = true
 
 [node name="Node3D" type="Node3D"]
 
-[node name="Player" parent="." instance=ExtResource("1_oxw2g")]
+[node name="Player" parent="." instance=ExtResource("1_xhgdy")]
 
 [node name="Stage" type="Node3D" parent="."]
 
