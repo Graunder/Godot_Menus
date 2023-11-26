@@ -9,7 +9,7 @@ uniform sampler2D NORMAL_TEXTURE : hint_normal_roughness_texture, filter_nearest
 
 
 uniform vec3 shadow_color : source_color = vec3(0.0);
-uniform float shadow_thickness = 2.0;
+uniform float shadow_thickness = 1.0;
 
 vec2 getDepth(vec2 screen_uv, sampler2D depth_texture, mat4 inv_projection_matrix){
 	float raw_depth = texture(depth_texture, screen_uv)[0];
@@ -21,7 +21,7 @@ vec2 getDepth(vec2 screen_uv, sampler2D depth_texture, mat4 inv_projection_matri
 
 
 void fragment() {
-	vec2 e = vec2(1./VIEWPORT_SIZE.xy)*1.0;
+	vec2 e = vec2(1./VIEWPORT_SIZE.xy)*0.3;
 
 	float depth_diff = 0.0;
 	float neg_depth_diff = .5;
