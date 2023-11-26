@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cihdmhcaap3st"]
+
+[ext_resource type="PackedScene" uid="uid://bdy0hwthmwhau" path="res://Assets/Models/DEV_Level_Test_Godot.glb" id="1_rw2a4"]
+[ext_resource type="Texture2D" uid="uid://cao3c1us2s0vp" path="res://Assets/Textures/Dev/dark.png" id="2_50m0e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_50rg8"]
+albedo_texture = ExtResource("2_50m0e")
+uv1_triplanar = true
+
+[node name="DEV_Level_Test_Godot" instance=ExtResource("1_rw2a4")]
+
+[node name="Level" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_50rg8")
