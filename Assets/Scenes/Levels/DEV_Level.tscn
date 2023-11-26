@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://i3t5mkdp5hxi"]
+[gd_scene load_steps=8 format=3 uid="uid://i3t5mkdp5hxi"]
 
 [ext_resource type="PackedScene" uid="uid://cumc1rsljw0m4" path="res://Assets/Scenes/player.tscn" id="1_oxw2g"]
 [ext_resource type="Texture2D" uid="uid://cao3c1us2s0vp" path="res://Assets/Textures/Dev/dark.png" id="2_utpvd"]
+[ext_resource type="Material" uid="uid://c5vmkbeaopotv" path="res://Assets/Materials/toon_shader_material.tres" id="3_a31yl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_75q4u"]
 albedo_texture = ExtResource("2_utpvd")
@@ -31,6 +32,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 use_collision = true
 size = Vector3(50, 1, 50)
 material = SubResource("StandardMaterial3D_75q4u")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 16)
+material = ExtResource("3_a31yl")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.25934, 16)
+sides = 32
+material = ExtResource("3_a31yl")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22083, 16)
+sides = 32
+cone = true
+material = ExtResource("3_a31yl")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 16)
+radial_segments = 32
+rings = 16
+material = ExtResource("3_a31yl")
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 16)
+sides = 32
+ring_sides = 32
+material = ExtResource("3_a31yl")
 
 [node name="Environment" type="Node3D" parent="."]
 
