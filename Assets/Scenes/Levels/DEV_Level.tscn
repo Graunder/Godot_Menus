@@ -1,9 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://i3t5mkdp5hxi"]
+[gd_scene load_steps=6 format=3 uid="uid://i3t5mkdp5hxi"]
 
-[ext_resource type="PackedScene" uid="uid://b5ttpkkv5yyht" path="res://Assets/Scenes/player_wOutile.tscn" id="1_xhgdy"]
-[ext_resource type="Material" uid="uid://c5vmkbeaopotv" path="res://Assets/Materials/toon_shader_material.tres" id="3_a31yl"]
-[ext_resource type="Material" uid="uid://cmuxume83altv" path="res://Assets/Materials/toon_shaded_standart_material.tres" id="4_5swyi"]
-[ext_resource type="PackedScene" uid="uid://cihdmhcaap3st" path="res://Assets/Scenes/Levels/dev_level_test_godot.tscn" id="4_dob2v"]
+[ext_resource type="PackedScene" uid="uid://cumc1rsljw0m4" path="res://Assets/Scenes/player.tscn" id="1_ivkbo"]
+[ext_resource type="PackedScene" uid="uid://cihdmhcaap3st" path="res://Assets/Scenes/Level_parts/dev_level_test_godot.tscn" id="2_ghmmx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s5gtj"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -20,65 +18,11 @@ glow_enabled = true
 
 [node name="Node3D" type="Node3D"]
 
-[node name="Player" parent="." instance=ExtResource("1_xhgdy")]
+[node name="Player" parent="." instance=ExtResource("1_ivkbo")]
 
 [node name="Stage" type="Node3D" parent="."]
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="Stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 16)
-material = ExtResource("3_a31yl")
-
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.25934, 16)
-sides = 32
-material = ExtResource("3_a31yl")
-
-[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.14473, 16)
-sides = 32
-cone = true
-material = ExtResource("3_a31yl")
-
-[node name="CSGSphere3D" type="CSGSphere3D" parent="Stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.19188, 16)
-radial_segments = 32
-rings = 16
-material = ExtResource("3_a31yl")
-
-[node name="CSGTorus3D" type="CSGTorus3D" parent="Stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.85518, 16)
-sides = 32
-ring_sides = 32
-material = ExtResource("3_a31yl")
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.9111, 2.22603, 16.4083)
-material = ExtResource("3_a31yl")
-
-[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="Stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9111, 2.19049, 16.4083)
-sides = 32
-material = ExtResource("3_a31yl")
-
-[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="Stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9111, 1.65145, 16.4083)
-sides = 32
-cone = true
-material = ExtResource("3_a31yl")
-
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="Stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.91105, 1, 16.4083)
-radial_segments = 32
-rings = 16
-material = ExtResource("4_5swyi")
-
-[node name="CSGTorus3D2" type="CSGTorus3D" parent="Stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.91105, 1, 16.4083)
-sides = 32
-ring_sides = 32
-material = ExtResource("3_a31yl")
-
-[node name="DEV_Level_Test_Godot" parent="Stage" instance=ExtResource("4_dob2v")]
+[node name="DEV_Level_Test_Godot" parent="Stage" instance=ExtResource("2_ghmmx")]
 
 [node name="Environment" type="Node3D" parent="."]
 
