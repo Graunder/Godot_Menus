@@ -3,7 +3,8 @@
 
 Sample main menu, empty options menu
 with game pausing/unpausing and giving up
-on top of my [First Person Controller](https://github.com/Graunder/Godot_FirstPersonController).
+on top of my [First Person Controller](https://github.com/Graunder/Godot_FirstPersonController) that 
+can be removed and replaced with a different controller.
 
 Both repos are based on Youtube tutorials and further experimentation.
 
