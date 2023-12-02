@@ -2,9 +2,9 @@
 > Godot v4.1.3.stable.mono.official
 
 Sample main menu, empty options menu
-with game pausing/unpausing and giving up
-on top of my [First Person Controller](https://github.com/Graunder/Godot_FirstPersonController) that 
-can be removed and replaced with a different controller.
+with "pausing/unpausing" and "giving up"
+on top of [First Person Controller](https://github.com/Graunder/Godot_FirstPersonController) that 
+can be removed and replaced with a different controller. 
 
 Both repos are based on Youtube tutorials and further experimentation.
 
